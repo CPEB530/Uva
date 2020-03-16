@@ -3,23 +3,23 @@ public class UVA10420{
 	public static void main(String args []){
 		Scanner sc=new Scanner(System.in);
 		int t=sc.nextInt();
-		String c[]=new String[t];
+		String C[]=new String[t];
 		sc.nextLine();
 		
 		for(int i=0;i<t;i++){
 			String s[]=sc.nextLine().trim().split(" ");
-			c[i]=s[0];
+			C[i]=s[0];
 		}
-		Arrays.sort(c);
+		Arrays.sort(C);
 		
 		int count=1;
-		String now=c[0];
+		String now=C[0];
 		for(int i=1;i<t;i++) {
-			if(c[i].equals(now)) {
+			if(C[i].equals(now)) {
 				count++;
 			}else {
 				System.out.println(now+" "+count);
-				now=c[i];
+				now=C[i];
 				count=1;
 				
 			}
@@ -27,7 +27,7 @@ public class UVA10420{
 				System.out.println(now+" "+count);
 			}
 			
-		}
+		}	
 		
 	}
 }
