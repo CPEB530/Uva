@@ -10,7 +10,7 @@ public class UVA11044 {
 			int n = sc.nextInt();
 			int m = sc.nextInt();
 			
-			System.out.println((n/3)*(m/3));
+			System.out.println((n/3) * (m/3));
 		}
 	}
 
