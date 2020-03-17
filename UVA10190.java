@@ -5,27 +5,40 @@ public class UVA10190 {
 		while(sc.hasNext()) {
 			int n = sc.nextInt();
 			int m = sc.nextInt();
-			if(m == 0 || m == 1 || n == 0) {
+			
+			if(m <= 1 || n <= 1) {
 				System.out.println("Boring!");
 				continue;
 			}
-			String res = n+"";
-			boolean b = false;
+			
+			ArrayList<Integer> data = new ArrayList<Integer>();
+			data.add(n);
+			
+			boolean boring = false;
+			
 			while(n!=1) {
 				if(n%m == 0) {
-					res+=" "+(n/m)+"";
+					data.add(n/m);
 					n/=m;
 				}
 				else {
-					b = true;
+					boring = true;
 					break;
 				}
 			}
-			if(res.equals(("1"))) b = true;
-			if(b) {
+			
+			if(boring) {
 				System.out.println("Boring!");
 			}
-			else System.out.println(res);
+			else {
+				for(int i = 0 ; i<data.size() ; i++) {
+					if(i != 0) {
+						System.out.print(" ");
+					}
+					System.out.print(data.get(i));
+				}
+				System.out.println();
+			}
 		}
 	}
 }
