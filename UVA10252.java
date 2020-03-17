@@ -12,10 +12,9 @@ public class UVA10252 {
 			count(b,b_alb);
 			for(int i = 0 ; i<26; i++) {
 				if(b_alb[i]!=0 && a_alb[i]!=0) {
-					while(a_alb[i]>0 && b_alb[i]>0) {
-						System.out.print((char)(i+'a'));
-						a_alb[i]--;
-						b_alb[i]--;
+					int min = Math.min(a_alb[i], b_alb[i]);
+					for(int j = 0 ; j<min; j++) {
+						System.out.print((char)(i + 'a'));
 					}
 				}
 			}
