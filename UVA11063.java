@@ -12,33 +12,37 @@ public class UVA11063 {
 			boolean isB2 = true;
 			for(int i=0;i<n;i++){
 				b[i] = sc.nextInt();
-				if(b[i]<1 || (i>0 && b[i-1]>=b[i]))
+				if(b[i] < 1 || (i > 0 && b[i-1] >= b[i]))
 					isB2 = false;
 			}
 			
-			if(isB2){
-				boolean[] appear = new boolean[2*b[n-1]+1];
+			if(isB2) {
+				boolean[] appear = new boolean[20005];
 				Arrays.fill(appear, false);
 				
 				for(int i=0;i<n;i++){
 					for(int j=i;j<n;j++){
-						int sum = b[i]+b[j];
+						int sum = b[i] + b[j];
 						if(appear[sum]){
 							isB2 = false;
-							break;
 						}
 						else{
 							appear[sum] = true;
 						}
 					}
-					if(!isB2)
-						break;
 				}
 			}
 			
-			System.out.print("Case #"+(kase++)+": ");
-			System.out.println(isB2 ? "It is a B2-Sequence." : "It is not a B2-Sequence.");
+			System.out.print("Case #" + kase + ": ");
+			
+			if(isB2)
+				System.out.println("It is a B2-Sequence.");
+			else
+				System.out.println("It is not a B2-Sequence.");
+			
 			System.out.println();
+			
+			kase++;
 		}
 	}
 
