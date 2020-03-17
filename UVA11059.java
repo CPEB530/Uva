@@ -5,7 +5,7 @@ public class UVA11059 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
         
-		int kase=1;
+		int kase = 1;
 		while(sc.hasNext()){
 			
 			int n = sc.nextInt();
@@ -19,17 +19,17 @@ public class UVA11059 {
 				long num = arr[i];
 				
 				if(num>max)
-					max=num;
+					max = num;
 				
 				for(int j=i+1;j<n;j++){
-					num*=arr[j];
+					num = num * arr[j];
 					
-					if(num>max)
-						max=num;
+					if(num > max)
+						max = num;
 				}
 			}
 			
-			System.out.println("Case #"+kase+": The maximum product is "+max+".");
+			System.out.println("Case #" + kase + ": The maximum product is " + max + ".");
 			System.out.println();
 			kase++;
 		}
