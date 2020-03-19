@@ -7,21 +7,8 @@ public class UVA11150 {
         
 		while(sc.hasNext()){
 			int n = sc.nextInt();
-			int sum = n;
 			
-			if(n==2)
-				n+=1;
-				
-			while(n>=3){
-				n-=3;
-				sum+=1;
-				n+=1;
-				
-				if(n==2)
-					n+=1;
-			}
-			
-			System.out.println(sum);
+			System.out.println(n + n/2);
 		}
 	}
 
