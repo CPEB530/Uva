@@ -14,11 +14,11 @@ public class UVA11309 {
 			
 			while(true){
 				m++;
-				if(m==60){
+				if(m == 60){
 					h++;
 					m = 0;
 					
-					if(h==24){
+					if(h == 24){
 						h = 0;
 						m = 0;
 					}
@@ -36,19 +36,19 @@ public class UVA11309 {
 		
 		String s = "";
 		
-		if(h==0) {
-			s+=m;
+		if(h == 0) {
+			s = s + m;
 		}
 		else {
-			s+=h;
-			String mm = m+"";
-			if(mm.length()==1)
-				mm = "0"+mm;
-			s+=mm;
+			s = s + h;
+			String mm = m + "";
+			if(mm.length() == 1)
+				mm = "0" + mm;
+			s = s + mm;
 		}
 		
 		for(int i=0;i<s.length();i++) {
-			if(s.charAt(i)!=s.charAt(s.length()-1-i))
+			if(s.charAt(i) != s.charAt(s.length()-1-i))
 				return false;
 		}
 		return true;
