@@ -11,7 +11,7 @@ public class UVA11313 {
  			int m = sc.nextInt();
  			
  			int show = 0;
- 			while(n > 1){
+ 			while(n >= m){
  				n = n - (m-1);
  				show++;
  			}
