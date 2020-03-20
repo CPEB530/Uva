@@ -34,20 +34,10 @@ public class UVA11309 {
 	
 	static boolean isPalindromic(int h, int m){
 		
-		String s = "";
+		String s = String.format("%02d%02d", h, m);
+		s = Integer.parseInt(s) + "";
 		
-		if(h == 0) {
-			s = s + m;
-		}
-		else {
-			s = s + h;
-			String mm = m + "";
-			if(mm.length() == 1)
-				mm = "0" + mm;
-			s = s + mm;
-		}
-		
-		for(int i=0;i<s.length();i++) {
+			for(int i=0;i<s.length();i++) {
 			if(s.charAt(i) != s.charAt(s.length()-1-i))
 				return false;
 		}
