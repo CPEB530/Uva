@@ -10,14 +10,13 @@ public class UVA11313 {
  			int n = sc.nextInt();
  			int m = sc.nextInt();
  			
- 			n = n - m;
- 			int show = 1;
- 			while(n > 0){
+ 			int show = 0;
+ 			while(n > 1){
  				n = n - (m-1);
  				show++;
  			}
  				
- 			if(n == 0)
+ 			if(n == 1)
  				System.out.println(show);
  			else
  				System.out.println("cannot do this");
