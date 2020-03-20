@@ -16,16 +16,13 @@ public class UVA11059 {
 			
 			long max = 0;
 			for(int i=0;i<n;i++){
-				long num = arr[i];
+				long p = 1;
 				
-				if(num>max)
-					max = num;
-				
-				for(int j=i+1;j<n;j++){
-					num = num * arr[j];
+				for(int j=i;j<n;j++){
+					p = p * arr[j];
 					
-					if(num > max)
-						max = num;
+					if(p > max)
+						max = p;
 				}
 			}
 			
