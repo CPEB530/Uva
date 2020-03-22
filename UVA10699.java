@@ -8,18 +8,24 @@ public class UVA10699 {
 				break;
 			}
 			System.out.print(n+" : ");
-			Set<Integer> s=new TreeSet<Integer>();
+			int A[]=new int [1000001];
 			int i=2;
 			
 			while(n!=1) {
 				if(n%i==0) {
 					n/=i;
-					s.add(i);
+					A[i]++;
 				}else {
 					i+=1;
 				}
 			}
-			System.out.println(s.size());
+			int count=0;
+			for(int j=0;j<=1000000;j++) {
+				if(A[j]!=0) {
+					count+=1;
+				}
+			}
+			System.out.println(count);
 			
 		}
 	}
