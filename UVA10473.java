@@ -4,7 +4,7 @@ public class UVA10473 {
 		// TODO Auto-generated method stub
 		Scanner sc=new Scanner(System.in);
 		while(true) {
-			String s=sc.next();
+			String s=sc.next().toUpperCase();
 
 			if(s.charAt(0)=='0'&&s.length()>=3) {
 				s=s.substring(2,s.length());
