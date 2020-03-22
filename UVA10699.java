@@ -8,7 +8,7 @@ public class UVA10699 {
 				break;
 			}
 			System.out.print(n+" : ");
-			int A[]=new int [1000001];
+			int A[]=new int [n+1];
 			int i=2;
 			
 			while(n!=1) {
@@ -20,7 +20,7 @@ public class UVA10699 {
 				}
 			}
 			int count=0;
-			for(int j=0;j<=1000000;j++) {
+			for(int j=0;j<A.length;j++) {
 				if(A[j]!=0) {
 					count+=1;
 				}
