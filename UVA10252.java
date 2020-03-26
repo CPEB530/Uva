@@ -1,8 +1,7 @@
 import java.util.*;
 public class UVA10252 {
-	public static void main(String args[]) {
+	public static void UVA10252(String args[]) {
 		Scanner sc = new Scanner(System.in);
-		int test = 0;
 		while(sc.hasNext()) {
 			String a = sc.nextLine();
 			String b = sc.nextLine();

@@ -9,22 +9,14 @@ public class UVA10282 {
 			String[] s = input.split(" ");
 			data.put(s[1], s[0]);
 		}
-		boolean first = true;
 		while(sc.hasNext()) {
 			String key = sc.next();
-			if(!first) {
-				System.out.println();
-			}
 			if(!data.containsKey(key)) {
-				System.out.print("eh");
+				System.out.println("eh");
 			}
 			else {
-				System.out.print(data.get(key));
-			}
-			if(first) {
-				first = false;
+				System.out.println(data.get(key));
 			}
 		}
-		System.out.println();
 	}
 }

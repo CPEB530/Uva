@@ -22,13 +22,11 @@ public class UVA10193 {
 	}
 	
 	static int getValue(String s) {
-		int v = 0;
-		int p = 1;
-		for(int i = s.length()-1; i>=0; i--) {
-			v += (s.charAt(i) - '0') * p;
-			p *= 2;
+		int sum = 0;
+		for(int i = 0 ; i<s.length(); i++) {
+			sum = sum * 2 + s.charAt(i) - '0';
 		}
-		return v;
+		return sum;
 	}
 	
 	static int gcd(int v1, int v2) {
