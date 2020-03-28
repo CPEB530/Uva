@@ -13,18 +13,23 @@ public class UVA10474 {
 				break;
 			}
 			System.out.println("CASE# "+t++ +":");
-			int []a=new int [10001];
+			int []sum=new int [10001];
+			int []count=new int [10001];
+			int l=0;
 			for(int i=0;i<n;i++) {
-				a[sc.nextInt()]++;
+				int x=sc.nextInt();
+				count[x]++;
+				if(x>l) {
+					l=x;
+				}
+			}
+			for(int i=1;i<=l;i++) {
+				sum[i]=sum[i-1]+count[i-1];
 			}
 			for(int i=0;i<q;i++) {
 				int m=sc.nextInt();
-				if(a[m]!=0) {
-					int sum=0;
-					for(int j=0;j<m;j++) {
-						sum+=a[j];
-					}
-					System.out.println(m+" found at "+(sum+1));
+				if(count[m]!=0) {
+					System.out.println(m+" found at "+(sum[m]+1));
 				}else {
 					System.out.println(m+" not found");
 				}
