@@ -4,8 +4,8 @@ public class UVA10469 {
 		// TODO Auto-generated method stub
 		Scanner sc=new Scanner(System.in);
 		while(sc.hasNext()) {
-			long a=sc.nextInt();
-			long b=sc.nextInt();
+			long a=sc.nextLong();
+			long b=sc.nextLong();
 			System.out.println(a^b);
 		}
 		
