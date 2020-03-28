@@ -18,7 +18,6 @@ public class UVA10473 {
 				System.out.println(str);
 			}
 		}
-		
 	}
 	public static String DecToHex(String s) {         
 		String ans="";
@@ -28,7 +27,7 @@ public class UVA10473 {
 			while(n>0) {
 				q=n%16;
 				if(q<10) {
-					ans=Integer.toString(q)+ans;
+					ans=q+ans;
 				}else {	
 					char a=(char)('A'+q-10);
 					ans=a+ans;	
@@ -44,17 +43,16 @@ public class UVA10473 {
 	}
 	public  static int HexToDec(String s) {
 		int ans=0;
-		for(int i=s.length()-1,j=0;i>=0;i--,j++) {
+		for(int i=0;i<s.length();i++) {
 			char c=s.charAt(i);
 			if(c>='A'&&c<='F') {
-				int a=c-'A'+10;
-				ans+=a*Math.pow(16,j);
+				ans=ans*16+(c-'A'+10);
 			}else {
-				ans+=(c-'0')*Math.pow(16,j);
+				ans=ans*16+(c-'0');
 			}
+			
 		}
 		return ans;
 	}
-	
-
 }
+
