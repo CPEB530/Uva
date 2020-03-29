@@ -8,7 +8,6 @@ public class UVA10699 {
 				break;
 			}
 			System.out.print(n+" : ");
-			int A[]=new int [n+1];
 			int i=2;
 			int count=0;
 			while(n!=1) {
